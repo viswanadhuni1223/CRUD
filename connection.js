@@ -17,14 +17,15 @@ const User = mongoose.model("publications", {
     },
     interest:{
         type:[String],
-        
+        enum :["node","MongoDb","express"],
+        required:true
     }
 
   
 })
 const user1 = new User({
-    author: "authorABC",
-    password: "pass123",
-    userName: "testauthor"
+    email:"test123@gmail.com",
+    userName:"test12",
+    interest:["node"]
 })
 user1.save().then(() => console.log("User added successfully!!!"))
