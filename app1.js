@@ -1,0 +1,7 @@
+const express= require('express')
+const app=express()
+const bodyparser=require("body-parser")
+app.use(bodyparser.json())
+const signup=require("./routes/createUser.js")
+app.use("/",signup)
+app.listen(3000,()=>{console.log('server started')})
