@@ -26,7 +26,7 @@ const User = mongoose.model("customer", {
         required:true
     },
     area:String,
-    pinocde:{
+    pincode:{
         type:Number,
         required:true
     },
